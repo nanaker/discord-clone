@@ -1,0 +1,129 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0.25;
+    height: 100vh;
+    background-color: $backgroud-color;
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        color: white;
+
+        border-bottom: 3px solid #26282c;
+    }
+
+    &__channels {
+        flex: 1;
+    }
+
+    &__addChannel {
+        cursor: pointer;
+
+        :hover {
+            color: white;
+        }
+    }
+
+    &__channelHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: $backgroud-color;
+        color: grey;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__voice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: grey;
+        background-color: $backgroud-color;
+        padding: 10px;
+        border-top: 1px solid gray;
+
+        &__icon {
+            color: #4fb185;
+
+
+        }
+
+        &__info {
+            flex: 1;
+            padding: 10px;
+
+            >h3 {
+                color: #4fb185;
+            }
+
+            >p {
+                font-size: smaller;
+            }
+        }
+
+        &__icons {
+
+            >.MuiSvgIcon-root {
+                padding: 10px;
+            }
+        }
+
+
+
+
+    }
+
+    &__profile {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: grey;
+        background-color: $backgroud-color;
+        padding: 10px;
+        border-top: 1px solid gray;
+
+        &__info {
+            flex: 1;
+            padding: 10px;
+
+
+        }
+
+        &__icons {}
+    }
+}
+
+.sidebarChannel {
+    >h4 {
+        display: flex;
+        padding-left: 15px;
+        align-items: center;
+        background-color: $backgroud-color;
+        color: grey;
+        cursor: pointer;
+
+
+    }
+
+    :hover {
+        color: white;
+        background-color: #40464b;
+    }
+
+
+
+    &__hash {
+        font-size: 30px;
+        padding: 8px;
+    }
+}
