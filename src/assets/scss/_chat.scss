@@ -1,1 +1,122 @@
-.chat {}
+.chat {
+    display: flex;
+    flex-direction: column;
+    background-color: $backgroud-color-darker;
+    flex: 0.75;
+    height: 100vh;
+
+    &__messages {
+        flex: 1;
+    }
+
+    &__input {
+        color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px;
+        border-top: 1px solid gray;
+        background-color: $backgroud-color-lighter;
+
+        &__form {
+            flex: 1;
+
+            >input {
+                padding: 15px;
+                background: transparent;
+                border: none;
+                outline-width: 0;
+                color: white;
+                font-size: larger;
+                width: 100%;
+
+            }
+        }
+    }
+
+    &__inputButton {
+        display: none;
+    }
+
+    &__inputIcons {
+        >.MuiSvgIcon-root {
+            padding: 5px;
+
+
+        }
+    }
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: grey;
+
+    &__left {
+        >h3 {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        &__hash {
+            color: gray;
+            font-size: 30px;
+            padding: 10px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        flex: 0.5;
+        justify-content: space-between;
+
+        >.MuiSvgIcon-root {
+            padding: 5px;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
+
+        }
+
+        &__search {
+            display: flex;
+            align-items: center;
+            color: gray;
+            background-color: $backgroud-color;
+            border-radius: 3px;
+            padding: 3px;
+
+            >input {
+                background-color: transparent;
+                outline-width: 0;
+                color: white;
+                border: none;
+            }
+        }
+    }
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+
+    &__info {
+        margin-left: 20px;
+
+        &__timestamp {
+            color: gray;
+            margin-left: 20px;
+            font-size: x-small;
+        }
+    }
+}

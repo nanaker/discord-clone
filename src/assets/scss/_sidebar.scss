@@ -23,7 +23,7 @@
     &__addChannel {
         cursor: pointer;
 
-        :hover {
+        &:hover {
             color: white;
         }
     }
@@ -112,13 +112,14 @@
         color: grey;
         cursor: pointer;
 
+        &:hover {
+            color: white;
+            background-color: #40464b;
+        }
 
     }
 
-    :hover {
-        color: white;
-        background-color: #40464b;
-    }
+
 
 
 
