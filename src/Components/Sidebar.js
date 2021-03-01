@@ -4,14 +4,20 @@ import AddIcon from "@material-ui/icons/Add";
 import SidebarChannel from "./SidebarChannel";
 import {
   Call,
+  ExitToApp,
   Headset,
   InfoOutlined,
+  MeetingRoom,
   Mic,
   Settings,
   SignalCellularAlt,
 } from "@material-ui/icons";
 import { Avatar } from "@material-ui/core";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
+import { auth } from "../config/firebase";
 const Sidebar = () => {
+  const user = useSelector(selectUser);
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -45,15 +51,20 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="sidebar__profile">
-        <Avatar src="https://lh3.google.com/u/0/ogw/ADGmqu93VN8nI1nOeozpKwmZHh7ya1SO5QiWDpz8Armd=s32-c-mo" />
+        <Avatar src={user.photo} />
         <div className="sidebar__profile__info">
-          <h3>@nawal</h3>
-          <p>#thisISMYID</p>
+          <h3>{user.displayName}</h3>
+          <p>{user.uid}</p>
         </div>
         <div className="sidebar__profile__icons">
           <Mic />
           <Headset />
-          <Settings />
+          <ExitToApp
+            titleAccess="logout"
+            style={{ cursor: "pointer" }}
+            onClick={() => auth.signOut()}
+          />
+          {/*  <Settings /> */}
         </div>
       </div>
     </div>

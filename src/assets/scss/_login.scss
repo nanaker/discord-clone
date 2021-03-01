@@ -1,0 +1,26 @@
+.login {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+
+    &__logo {
+        img {
+            object-fit: contain;
+            height: 250px;
+        }
+
+    }
+
+    &__button {
+        width: 300px;
+        background-color: $discord-color !important;
+        color: #eff2f5 !important;
+        font-weight: 800 !important;
+
+        &:hover {
+            background-color: black !important;
+            color: $discord-color !important;
+        }
+    }
+}
