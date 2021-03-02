@@ -7,13 +7,15 @@ import {
   SendRounded,
 } from "@material-ui/icons";
 import React from "react";
+import { useSelector } from "react-redux";
 
-const ChatHeader = () => {
+const ChatHeader = ({ channelName }) => {
   return (
     <div className="chatHeader">
       <div className="chatHeader__left">
         <h3>
-          <span className="chatHeader__left__hash">#</span>test channel name
+          <span className="chatHeader__left__hash">#</span>
+          {channelName}
         </h3>
       </div>
       <div className="chatHeader__right">

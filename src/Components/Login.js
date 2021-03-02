@@ -16,7 +16,7 @@ const Login = () => {
       if (authUser) {
         dispatch(
           login({
-            uid: authUser.id,
+            uid: authUser.id || "",
             photo: authUser.photoURL,
             email: authUser.email,
             displayName: authUser.displayName,
