@@ -109,18 +109,28 @@
 }
 
 .sidebarChannel {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    // background-color: $backgroud-color;
+    color: white;
+    cursor: pointer;
+
+
     >h4 {
         display: flex;
-        padding-left: 15px;
+
         align-items: center;
-        background-color: $backgroud-color;
         color: grey;
         cursor: pointer;
 
-        &:hover {
+        /*  &:hover {
             color: white;
             background-color: #40464b;
-        }
+        } */
 
     }
 
@@ -131,5 +141,11 @@
     &__hash {
         font-size: 30px;
         padding: 8px;
+    }
+
+
+    &:hover {
+        color: white;
+        background-color: #40464b;
     }
 }
