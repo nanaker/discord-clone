@@ -28,6 +28,7 @@ const SidebarChannel = ({ id, channelName }) => {
       });
 
       console.log("Transaction success!");
+      setEdit(false);
     } catch (e) {
       console.log("Transaction failure:", e);
     }
